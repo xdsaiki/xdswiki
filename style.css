@@ -13,6 +13,7 @@
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
+    scroll-padding-top: 10rem; /* Offset for fixed header */
 }
 
 body {
@@ -23,13 +24,14 @@ body {
 }
 
 header {
-    margin-top: 20px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 1rem 9%;
-    background-color: transparent;
+    background-color: rgba(26, 26, 26, 0.9); /* Subtle overlay */
+    backdrop-filter: blur(6px); /* Smooth blur effect */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: space-between;
     align-items: center;
