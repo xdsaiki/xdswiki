@@ -1,107 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Saiki | Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+  <title>Saiki | Portfolio</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <a href="#" class="logo">Saiki</a>
+  <header>
+    <a href="#" class="logo">Saiki</a>
+    <nav>
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#work">My Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-        <nav>
-            <a href="#" class="active">Home</a>
-            <a href="#">Essays</a>
-            <a href="#about">About</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
+  <!-- HOME SECTION -->
+  <section class="home" id="home">
+    <div class="home-img">
+      <img src="portfolio.jpg" alt="Portrait of Saiki" />
+    </div>
+    <div class="home-content">
+      <h1>Hey, I'm <span>Saiki</span></h1>
+      <h3 class="typing-text">Psych Student. Writer. Hustler.</h3>
+      <p>I study the human mind — biologically, philosophically, and at times humorously.</p>
+      <p>
+        I write to process the world and my place in it. Some days it’s about people who break, other days it’s about why systems do. 
+        I’m drawn to questions that don’t have easy answers, and to stories that don’t fit neatly into good or evil.
+      </p>
+      <div class="social-icons">
+        <a href="https://linkedin.com/in/xdsaiki"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/xdsaiki"><i class="fa-brands fa-github"></i></a>
+        <a href="https://twitter.com/sgskofficial"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://instagram.com/xd_saiki"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+      <a href="#work" class="btn">Read My Work</a>
+    </div>
+  </section>
 
-    <section class="home">
-        <div class="home-img">
-            <img src="portfolio.jpg" alt="Portrait of Saiki">
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about">
+    <div class="about-content">
+      <h2 class="section-title">About</h2>
+      <p>
+        Hey! I'm Sai Krishna. My entire personality can be worked into one statement — <i>Curiosity vs Schrödinger’s Cat</i>.
+      </p>
+      <p>
+        I'm passionate about writing and borderline religious when it comes to finding solutions that don’t exist yet. I tend to see the world sideways — not because I’m wrong, but because that’s where the better answers are hiding.
+      </p>
+      <p>
+        I like listening more than talking, and observing more than reacting. In between all that, I read about war, power, persuasion, madness, survival, and systems that bend but don’t break.
+      </p>
+
+      <h3 class="section-subtitle">Skills</h3>
+      <div class="skills-grid">
+        <div class="skills-column">
+          <h4>🧰 Tech Skills</h4>
+          <ul>
+            <li>♠ Google Workspace</li>
+            <li>♠ Microsoft Office Suite</li>
+            <li>♠ HTML & CSS</li>
+            <li>♠ GitHub</li>
+            <li>♠ AI Prompt Engineering</li>
+          </ul>
         </div>
 
-        <div class="home-content">
-            <h1>Hey, I'm <span>Saiki</span></h1>
-            <h3 class="typing-text">Psych Student. Writer. Hustler.</h3>
-            <p>
-                I study the human mind — biologically, philosophically, and at times humorously.
-            </p>
-            <p>
-                I write to process the world and my place in it. Some days it’s about people who break, other days it’s about why systems do. 
-                I’m drawn to questions that don’t have easy answers, and to stories that don’t fit neatly into good or evil.
-            </p>
-
-            <div class="social-icons">
-                <a href="https://linkedin.com/in/xdsaiki"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/xdsaiki"><i class="fa-brands fa-github"></i></a>
-                <a href="https://twitter.com/sgskofficial"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://instagram.com/xd_saiki"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-
-            <a href="#" class="btn">Read My Work</a>
+        <div class="skills-column">
+          <h4>🧠 Core Thinking Skills</h4>
+          <ul>
+            <li>♠ Analytical Writing</li>
+            <li>♠ Rapid Learning & Reframing</li>
+            <li>♠ Research & Behavioral Observation</li>
+            <li>♠ Persuasive Communication</li>
+            <li>♠ Narrative Design</li>
+          </ul>
         </div>
-    </section>
 
-    <section id="about" class="about">
-        <div class="about-content">
-            <h2 class="section-title">About</h2>
-            <p>
-                Hey! I'm Sai Krishna. My entire personality can be worked into one statement — <i>Curiosity vs Schrödinger’s Cat</i>.  
-            </p>
-            <p>
-                I'm passionate about writing and borderline religious when it comes to finding solutions that don’t exist yet. I tend to see the world sideways — not because I’m wrong, but because that’s where the better answers are hiding.
-            </p>
-            <p>
-                I like listening more than talking, and observing more than reacting. In between all that, I read about war, power, persuasion, madness, survival, and systems that bend but don’t break. 
-            </p>
+        <div class="skills-column">
+          <h4>💬 Soft Skills</h4>
+          <ul>
+            <li>♠ Adaptive Thinking</li>
+            <li>♠ Empathy Without Sentimentality</li>
+            <li>♠ High Stress Tolerance</li>
+            <li>♠ Independent Initiative</li>
+            <li>♠ Social Perceptiveness</li>
+          </ul>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="skills">
-        <div class="skills-content">
-            <h2 class="section-title">Skills</h2>
+  <!-- WORK SECTION -->
+  <section id="work" class="work">
+    <div class="work-content">
+      <h2 class="section-title">My Work</h2>
+      <p>Essays and explorations coming soon. In the meantime, feel free to check my GitHub or LinkedIn.</p>
+    </div>
+  </section>
 
-            <div class="skills-grid">
-                <div class="skills-column">
-                    <h3>🧰 Tech Skills</h3>
-                    <ul>
-                        <li>♠ Google Workspace</li>
-                        <li>♠ Microsoft Office Suite</li>
-                        <li>♠ HTML & CSS</li>
-                        <li>♠ GitHub</li>
-                        <li>♠ AI Prompt Engineering</li>
-                    </ul>
-                </div>
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact">
+    <div class="contact-heading">
+      <h2>You've Come This Far</h2>
+      <p>If you're here, there's probably a reason. Maybe a job. Maybe fate. Either way, I'm listening.</p>
+    </div>
 
-                <div class="skills-column">
-                    <h3>🧠 Core Thinking Skills</h3>
-                    <ul>
-                        <li>♠ Analytical Writing</li>
-                        <li>♠ Rapid Learning & Reframing</li>
-                        <li>♠ Research & Behavioral Observation</li>
-                        <li>♠ Persuasive Communication</li>
-                        <li>♠ Narrative Design</li>
-                    </ul>
-                </div>
-
-                <div class="skills-column">
-                    <h3>💬 Soft Skills</h3>
-                    <ul>
-                        <li>♠ Adaptive Thinking</li>
-                        <li>♠ Empathy Without Sentimentality</li>
-                        <li>♠ High Stress Tolerance</li>
-                        <li>♠ Independent Initiative</li>
-                        <li>♠ Social Perceptiveness</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="contact-form">
+      <iframe 
+        src="https://docs.google.com/forms/d/e/1FAIpQLSd5pv-eJGSVYy92sjXUIYIVSsLxEQrlTK7GGWT2ZnYjbA4sGQ/viewform?embedded=true" 
+        width="100%" 
+        height="1357" 
+        frameborder="0" 
+        marginheight="0" 
+        marginwidth="0"
+        loading="lazy">
+        Loading…
+      </iframe>
+    </div>
+  </section>
 </body>
 </html>
