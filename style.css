@@ -13,7 +13,7 @@
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
-    scroll-padding-top: 10rem; /* Offset for fixed header */
+    scroll-padding-top: 10rem;
 }
 
 body {
@@ -23,14 +23,15 @@ body {
     color: #f0f0f0;
 }
 
+/* HEADER */
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 1rem 9%;
-    background-color: rgba(26, 26, 26, 0.9); /* Subtle overlay */
-    backdrop-filter: blur(6px); /* Smooth blur effect */
+    background-color: rgba(26, 26, 26, 0.9);
+    backdrop-filter: blur(6px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: space-between;
@@ -65,11 +66,13 @@ nav a.active {
     border-bottom: 3px solid #d4a373;
 }
 
+/* SECTIONS */
 section {
     min-height: 100vh;
     padding: 5rem 9% 5rem;
 }
 
+/* HOME */
 .home {
     display: flex;
     justify-content: center;
@@ -114,6 +117,7 @@ span {
     box-shadow: 0 0 40px #d4a373;
 }
 
+/* SOCIAL ICONS */
 .social-icons a {
     display: inline-flex;
     justify-content: center;
@@ -136,6 +140,7 @@ span {
     box-shadow: 0 0 25px #d4a373;
 }
 
+/* BUTTON */
 .btn {
     display: inline-block;
     padding: 1rem 2.8rem;
@@ -157,7 +162,7 @@ span {
     box-shadow: 0 0 25px #d4a373;
 }
 
-/* Typing animation */
+/* TYPING ANIMATION */
 .typing-text {
     font-size: 3.4rem;
     font-weight: 600;
@@ -205,7 +210,7 @@ span {
     }
 }
 
-/* ABOUT + SKILLS SECTION */
+/* ABOUT SECTION */
 .about {
     background-color: #1e1e1c;
     color: #f4f1ee;
@@ -287,64 +292,6 @@ span {
     font-size: 1.6rem;
 }
 
-/* CONTACT SECTION */
-.contact {
-    background-color: #1e1e1c;
-    color: #f4f1ee;
-    padding: 5rem 9% 2rem;
-    text-align: center;
-}
-
-.contact-heading h2 {
-    font-size: 3.6rem;
-    margin-bottom: 1rem;
-    color: #d8a25d;
-}
-
-.contact-heading p {
-    font-size: 1.6rem;
-    margin-bottom: 3rem;
-}
-
-.contact-form iframe {
-    border: none;
-    width: 100%;
-    height: 1357px;
-    max-width: 800px;
-    margin: 0 auto;
-    display: block;
-    border-radius: 12px;
-    box-shadow: 0 0 30px rgba(212, 163, 115, 0.2);
-}
-
-/* Responsive Adjustments */
-@media (max-width: 1000px) {
-    .home {
-        gap: 4rem;
-        flex-direction: column;
-        padding: 4rem 2rem;
-    }
-
-    .home .home-content h1 {
-        font-size: 5rem;
-    }
-
-    .home-content h3 {
-        font-size: 3rem;
-    }
-
-    .home-img img {
-        width: 70vw;
-        margin-top: 2rem;
-    }
-
-    .skills-grid {
-        flex-direction: column;
-        gap: 2rem;
-    }
-}
-
-/* MY WORK - PDF GRID STYLE */
 .pdf-grid {
     display: flex;
     flex-wrap: wrap;
@@ -394,6 +341,37 @@ span {
     border-color: #d4a373;
 }
 
+/* CONTACT SECTION */
+.contact {
+    background-color: #1e1e1c;
+    color: #f4f1ee;
+    padding: 5rem 9% 2rem;
+    text-align: center;
+}
+
+.contact-heading h2 {
+    font-size: 3.6rem;
+    margin-bottom: 1rem;
+    color: #d8a25d;
+}
+
+.contact-heading p {
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+}
+
+.contact-form iframe {
+    border: none;
+    width: 100%;
+    height: 1357px;
+    max-width: 800px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(212, 163, 115, 0.2);
+}
+
+/* ===== MOBILE OPTIMIZATION (Media Query) ===== */
 @media (max-width: 768px) {
   nav {
     display: none;
@@ -401,6 +379,12 @@ span {
 
   header {
     padding: 1rem 5%;
+  }
+
+  .home {
+    flex-direction: column;
+    padding: 4rem 2rem;
+    gap: 4rem;
   }
 
   .home-content h1 {
@@ -415,9 +399,19 @@ span {
     font-size: 1.4rem;
   }
 
+  .home-img img {
+    width: 70vw;
+    margin-top: 2rem;
+  }
+
   .btn {
     padding: 0.8rem 2rem;
     font-size: 1.4rem;
+  }
+
+  .skills-grid {
+    flex-direction: column;
+    gap: 2rem;
   }
 
   .pdf-card {
