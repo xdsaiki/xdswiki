@@ -157,239 +157,54 @@ span {
     box-shadow: 0 0 25px #d4a373;
 }
 
-/* Typing animation */
-.typing-text {
-    font-size: 3.4rem;
-    font-weight: 600;
-    min-width: 280px;
-    margin-bottom: 1rem;
-    position: relative;
-}
-
-.typing-text span {
-    position: relative;
-}
-
-.typing-text span::before {
-    content: "Psych Student";
-    color: #d4a373;
-    animation: words 10s infinite;
-}
-
-.typing-text span::after {
-    content: "";
-    background-color: #1a1a1a;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-left: 3px solid #d4a373;
-    right: 0;
-    animation: cursor 0.6s infinite;
-}
-
-@keyframes cursor {
-    to {
-        border-left: 3px solid transparent;
-    }
-}
-
-@keyframes words {
-    0%, 33% {
-        content: "Psych Student";
-    }
-    34%, 66% {
-        content: "Writer";
-    }
-    67%, 100% {
-        content: "Hustler";
-    }
-}
-
-/* ABOUT + SKILLS SECTION */
-.about {
-    background-color: #1e1e1c;
-    color: #f4f1ee;
-    padding: 5rem 9% 2rem;
-    text-align: left;
-}
-
-.about-content {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.about .section-title,
-.about .section-subtitle {
-    font-size: 3.6rem;
-    margin-bottom: 2rem;
-    color: #d8a25d;
-}
-
-.about-content p {
-    font-size: 1.6rem;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-}
-
-.skills-grid {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 4rem;
-    margin-top: 4rem;
-}
-
-.skills-column {
-    flex: 1 1 250px;
-}
-
-.skills-column h4 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #d8a25d;
-}
-
-.skills-column ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.skills-column ul li {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #f4f1ee;
-    position: relative;
-    padding-left: 1.5rem;
-}
-
-.skills-column ul li::before {
-    content: "♠";
-    position: absolute;
-    left: 0;
-    color: #9d6b4e;
-}
-
-/* MY WORK SECTION */
-.work {
-    background-color: #1a1a1a;
-    color: #f0f0f0;
-    padding: 5rem 9%;
-    text-align: center;
-}
-
-.work .section-title {
-    font-size: 3.6rem;
-    color: #d8a25d;
-    margin-bottom: 2rem;
-}
-
-.work-content p {
-    font-size: 1.6rem;
-}
-
-/* CONTACT SECTION */
-.contact {
-    background-color: #1e1e1c;
-    color: #f4f1ee;
-    padding: 5rem 9% 2rem;
-    text-align: center;
-}
-
-.contact-heading h2 {
-    font-size: 3.6rem;
-    margin-bottom: 1rem;
-    color: #d8a25d;
-}
-
-.contact-heading p {
-    font-size: 1.6rem;
-    margin-bottom: 3rem;
-}
-
-.contact-form iframe {
-    border: none;
-    width: 100%;
-    height: 1357px;
-    max-width: 800px;
-    margin: 0 auto;
-    display: block;
-    border-radius: 12px;
-    box-shadow: 0 0 30px rgba(212, 163, 115, 0.2);
-}
-
-/* Responsive Adjustments */
-@media (max-width: 1000px) {
-    .home {
-        gap: 4rem;
-        flex-direction: column;
-        padding: 4rem 2rem;
-    }
-
-    .home .home-content h1 {
-        font-size: 5rem;
-    }
-
-    .home-content h3 {
-        font-size: 3rem;
-    }
-
-    .home-img img {
-        width: 70vw;
-        margin-top: 2rem;
-    }
-
-    .skills-grid {
-        flex-direction: column;
-        gap: 2rem;
-    }
-}
-
-/* MY WORK - PDF GRID STYLE */
-.pdf-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3rem;
-    justify-content: center;
-    margin-top: 4rem;
-}
-
-.pdf-card {
-    background-color: #1e1e1c;
-    border: 2px solid #d4a37340;
-    border-radius: 1.2rem;
-    padding: 2.5rem 2rem;
-    width: 300px;
-    box-shadow: 0 0 15px rgba(212, 163, 115, 0.1);
-    transition: all 0.3s ease;
-    display: flex;
+/* Responsive Additions */
+@media (max-width: 768px) {
+  header {
     flex-direction: column;
-    justify-content: space-between;
-    text-align: left;
-}
-
-.pdf-card h3 {
+    align-items: flex-start;
+    padding: 1rem 5%;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  nav a {
+    font-size: 1.6rem;
+    margin: 0;
+  }
+  .home-content h1 {
+    font-size: 4rem;
+  }
+  .home-content h3 {
+    font-size: 2.4rem;
+  }
+  .typing-text {
     font-size: 2rem;
-    color: #d8a25d;
-    margin-bottom: 1rem;
-}
-
-.pdf-card p {
+  }
+  .home {
+    gap: 2rem;
+    flex-direction: column;
+  }
+  .home-img img {
+    width: 80vw;
+  }
+  .btn {
     font-size: 1.4rem;
-    color: #f0f0f0;
-    margin-bottom: 2rem;
-    line-height: 1.5;
-}
-
-.pdf-card .btn {
-    align-self: flex-start;
     padding: 0.8rem 2rem;
-    font-size: 1.4rem;
-    font-weight: 600;
-    border-radius: 2.5rem;
-}
-
-.pdf-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 0 25px rgba(212, 163, 115, 0.25);
-    border-color: #d4a373;
+  }
+  .skills-grid {
+    flex-direction: column;
+  }
+  .pdf-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pdf-card {
+    width: 90%;
+  }
+  .contact-form iframe {
+    height: 1000px;
+  }
 }
