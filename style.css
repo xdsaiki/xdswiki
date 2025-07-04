@@ -215,7 +215,7 @@ span {
     background-color: #1e1e1c;
     color: #f4f1ee;
     padding: 5rem 9% 2rem;
-    text-align: left;
+    text-align: center;
 }
 
 .about-content {
@@ -413,15 +413,3 @@ span {
     flex-direction: column;
     gap: 2rem;
   }
-.section-title {
-    text-align: center;
-}
-
-.section-subtitle {
-    text-align: center;
-}
-
-  .pdf-card {
-    width: 90%;
-  }
-}
