@@ -413,6 +413,13 @@ span {
     flex-direction: column;
     gap: 2rem;
   }
+.section-title {
+    text-align: center;
+}
+
+.section-subtitle {
+    text-align: center;
+}
 
   .pdf-card {
     width: 90%;
