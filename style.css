@@ -358,26 +358,26 @@ span {
   position: fixed;
   top: 0;
   left: 0;
-  width: 20px;
-  height: 20px;
-  background-color: #d4a373;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   pointer-events: none;
   box-shadow: 0 0 20px #d4a37388, 0 0 40px #d4a37355;
   transform: translate(-50%, -50%);
-  transition: transform 0.08s ease-out, opacity 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.1s ease-out, opacity 0.3s ease;
   z-index: 9999;
-  mix-blend-mode: difference;
   opacity: 1;
-}
-
-.custom-cursor.cursor-hover {
-  transform: translate(-50%, -50%) scale(2);
-  box-shadow: 0 0 30px #d4a373aa, 0 0 60px #d4a37399;
+  mix-blend-mode: screen;
+  background-color: transparent; /* ✨ Key change */
 }
 
 .custom-cursor.idle {
   opacity: 0;
+}
+
+.custom-cursor.cursor-hover {
+  transform: translate(-50%, -50%) scale(1.4);
+  box-shadow: 0 0 25px #d4a373aa, 0 0 60px #d4a37399;
 }
 
 /* MOBILE */
