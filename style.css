@@ -162,7 +162,7 @@ span {
   box-shadow: 0 0 25px #d4a373;
 }
 
-/* TYPING ANIMATION (with JS) */
+/* TYPING ANIMATION */
 .typing-text {
   font-size: 3.4rem;
   font-weight: 600;
@@ -200,14 +200,14 @@ span {
   font-size: 3.6rem;
   margin-bottom: 2rem;
   color: #d8a25d;
-  text-align: center;
+  text-align: left;
 }
 
 .about .section-subtitle {
   font-size: 3.6rem;
   margin-bottom: 2rem;
   color: #d8a25d;
-  text-align: left; /* Skills heading */
+  text-align: left;
 }
 
 .about-content p {
@@ -268,6 +268,7 @@ span {
   font-size: 3.6rem;
   color: #d8a25d;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .pdf-grid {
