@@ -196,12 +196,18 @@ span {
   margin: 0 auto;
 }
 
-.about .section-title,
-.about .section-subtitle {
+.about .section-title {
   font-size: 3.6rem;
   margin-bottom: 2rem;
   color: #d8a25d;
   text-align: center;
+}
+
+.about .section-subtitle {
+  font-size: 3.6rem;
+  margin-bottom: 2rem;
+  color: #d8a25d;
+  text-align: left; /* Skills heading */
 }
 
 .about-content p {
