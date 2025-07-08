@@ -352,6 +352,21 @@ span {
   border-radius: 12px;
   box-shadow: 0 0 30px rgba(212, 163, 115, 0.2);
 }
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #d4a373;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 0 0 20px #d4a37388, 0 0 40px #d4a37355;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
 
 /* MOBILE */
 @media (max-width: 768px) {
