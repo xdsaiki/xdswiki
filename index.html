@@ -73,7 +73,6 @@
             <li>AI Prompt Engineering</li>
           </ul>
         </div>
-
         <div class="skills-column">
           <h4 class="skills-heading">🧠 Core Thinking Skills</h4>
           <ul>
@@ -84,7 +83,6 @@
             <li>Narrative Design</li>
           </ul>
         </div>
-
         <div class="skills-column">
           <h4 class="skills-heading">💬 Soft Skills</h4>
           <ul>
@@ -139,7 +137,6 @@
       <h2>What are the odds we meet like this?</h2>
       <p>The best stories begin with strangers trading names. So here’s your chance to make this one a little less anonymous.</p>
     </div>
-
     <div class="contact-form">
       <iframe 
         src="https://docs.google.com/forms/d/e/1FAIpQLSd5pv-eJGSVYy92sjXUIYIVSsLxEQrlTK7GGWT2ZnYjbA4sGQ/viewform?embedded=true" 
@@ -154,7 +151,7 @@
     </div>
   </section>
 
-  <!-- TYPING SCRIPT -->
+  <!-- Typing Text Animation -->
   <script>
     const words = ["Psychology Student.", "Writer.", "Hustler."];
     let i = 0, j = 0, isDeleting = false;
@@ -181,30 +178,40 @@
     document.addEventListener("DOMContentLoaded", type);
   </script>
 
-  <!-- CUSTOM CURSOR -->
-  <div class="custom-cursor"></div>
+  <!-- Custom Glowing Cursor -->
+  <div class="custom-cursor" id="custom-cursor">♠</div>
   <script>
-    const cursor = document.querySelector('.custom-cursor');
-    let timeout;
+    const cursor = document.getElementById('custom-cursor');
+    let lastMove = Date.now();
+    const isMobile = /iPhone|iPad|Android/i.test(navigator.userAgent);
 
-    document.addEventListener('mousemove', e => {
-      cursor.style.top = `${e.clientY}px`;
-      cursor.style.left = `${e.clientX}px`;
-      cursor.classList.remove('idle');
+    if (!isMobile) {
+      document.body.style.cursor = "none";
 
-      clearTimeout(timeout);
-      timeout = setTimeout(() => {
-        cursor.classList.add('idle');
-      }, 1500);
-    });
+      document.addEventListener('mousemove', (e) => {
+        cursor.style.top = `${e.clientY}px`;
+        cursor.style.left = `${e.clientX}px`;
+        cursor.classList.remove("idle");
+        cursor.classList.add("cursor-hover");
+        lastMove = Date.now();
 
-    document.addEventListener('mousedown', () => {
-      cursor.classList.add('cursor-hover');
-    });
+        setTimeout(() => {
+          if (Date.now() - lastMove > 1500) {
+            cursor.classList.remove("cursor-hover");
+            cursor.classList.add("idle");
+          }
+        }, 1600);
+      });
 
-    document.addEventListener('mouseup', () => {
-      cursor.classList.remove('cursor-hover');
-    });
+      document.addEventListener('mousedown', () => {
+        cursor.classList.add('cursor-hover');
+      });
+      document.addEventListener('mouseup', () => {
+        cursor.classList.remove('cursor-hover');
+      });
+    } else {
+      cursor.style.display = "none";
+    }
   </script>
 </body>
 </html>
