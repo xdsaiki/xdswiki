@@ -137,8 +137,7 @@
   <section id="contact" class="contact">
     <div class="contact-heading">
       <h2>What are the odds we meet like this?</h2>
-      <p>The best stories begin with strangers trading names.
-      So here’s your chance to make this one a little less anonymous.</p>
+      <p>The best stories begin with strangers trading names. So here’s your chance to make this one a little less anonymous.</p>
     </div>
 
     <div class="contact-form">
@@ -158,22 +157,16 @@
   <!-- TYPING SCRIPT -->
   <script>
     const words = ["Psychology Student.", "Writer.", "Hustler."];
-    let i = 0;
-    let j = 0;
-    let currentWord = '';
-    let isDeleting = false;
-
+    let i = 0, j = 0, isDeleting = false;
     const typingElement = document.getElementById('typing');
 
     function type() {
-      currentWord = words[i];
-      if (isDeleting) {
-        typingElement.textContent = currentWord.substring(0, j--);
-      } else {
-        typingElement.textContent = currentWord.substring(0, j++);
-      }
+      const current = words[i];
+      typingElement.textContent = isDeleting
+        ? current.substring(0, j--)
+        : current.substring(0, j++);
 
-      if (!isDeleting && j === currentWord.length + 1) {
+      if (!isDeleting && j === current.length + 1) {
         isDeleting = true;
         setTimeout(type, 1000);
       } else if (isDeleting && j === 0) {
@@ -187,13 +180,31 @@
 
     document.addEventListener("DOMContentLoaded", type);
   </script>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="custom-cursor"></div>
   <script>
-  const cursor = document.querySelector('.custom-cursor');
-  document.addEventListener('mousemove', e => {
-    cursor.style.top = `${e.clientY}px`;
-    cursor.style.left = `${e.clientX}px`;
-  });
-</script>
-<div class="custom-cursor"></div>
+    const cursor = document.querySelector('.custom-cursor');
+    let timeout;
+
+    document.addEventListener('mousemove', e => {
+      cursor.style.top = `${e.clientY}px`;
+      cursor.style.left = `${e.clientX}px`;
+      cursor.classList.remove('idle');
+
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        cursor.classList.add('idle');
+      }, 1500);
+    });
+
+    document.addEventListener('mousedown', () => {
+      cursor.classList.add('cursor-hover');
+    });
+
+    document.addEventListener('mouseup', () => {
+      cursor.classList.remove('cursor-hover');
+    });
+  </script>
 </body>
 </html>
