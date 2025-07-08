@@ -31,7 +31,7 @@
     </div>
     <div class="home-content">
       <h1>Hey, I'm <span>Saiki</span></h1>
-      <h3 class="typing-text">I'm a <span></span></h3>
+      <h3 class="typing-text">I'm a <span id="typing"></span></h3>
       <p>I study the human mind — biologically, philosophically, and at times humorously.</p>
       <p>
         I write to process the world and my place in it. Some days it’s about people who break, other days it’s about why systems do. 
@@ -154,36 +154,38 @@
       </iframe>
     </div>
   </section>
+
+  <!-- TYPING SCRIPT -->
   <script>
-  const words = ["Psychology Student.", "Writer.", "Hustler."];
-  let i = 0;
-  let j = 0;
-  let currentWord = '';
-  let isDeleting = false;
+    const words = ["Psychology Student.", "Writer.", "Hustler."];
+    let i = 0;
+    let j = 0;
+    let currentWord = '';
+    let isDeleting = false;
 
-  const typingElement = document.getElementById('typing');
+    const typingElement = document.getElementById('typing');
 
-  function type() {
-    currentWord = words[i];
-    if (isDeleting) {
-      typingElement.textContent = currentWord.substring(0, j--);
-    } else {
-      typingElement.textContent = currentWord.substring(0, j++);
+    function type() {
+      currentWord = words[i];
+      if (isDeleting) {
+        typingElement.textContent = currentWord.substring(0, j--);
+      } else {
+        typingElement.textContent = currentWord.substring(0, j++);
+      }
+
+      if (!isDeleting && j === currentWord.length + 1) {
+        isDeleting = true;
+        setTimeout(type, 1000);
+      } else if (isDeleting && j === 0) {
+        isDeleting = false;
+        i = (i + 1) % words.length;
+        setTimeout(type, 300);
+      } else {
+        setTimeout(type, isDeleting ? 50 : 120);
+      }
     }
 
-    if (!isDeleting && j === currentWord.length + 1) {
-      isDeleting = true;
-      setTimeout(type, 1000); // pause after typing a word
-    } else if (isDeleting && j === 0) {
-      isDeleting = false;
-      i = (i + 1) % words.length;
-      setTimeout(type, 300);
-    } else {
-      setTimeout(type, isDeleting ? 50 : 120);
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded", type);
-</script>
+    document.addEventListener("DOMContentLoaded", type);
+  </script>
 </body>
 </html>
